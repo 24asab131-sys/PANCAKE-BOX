@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery | Pancake Box</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/logo.jpeg" alt="Logo Pancake Box">
+                <span>Pancake Box</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                <li><a href="jquery.html" class="activo">jQuery</a></li>
+                <li><a href="json.html">JSON</a></li>
+                <li><a href="hosting.html">Hosting & Dominios</a></li>
+                <li><a href="cuestionario.html">Cuestionario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ENCABEZADO -->
+    <section class="pagina-hero">
+        <div>
+            <span class="etiqueta">TECNOLOGÍA WEB</span>
+            <h1>jQuery</h1>
+            <p>
+                Una biblioteca de JavaScript que facilita la creación
+                de páginas web interactivas.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ¿QUÉ ES JQUERY? -->
+    <section class="info-section">
+        <h2>¿Qué es jQuery?</h2>
+
+        <p>
+            jQuery es una biblioteca de JavaScript creada para facilitar
+            el desarrollo de páginas web. Permite realizar acciones sobre
+            los elementos HTML de una página utilizando menos código.
+        </p>
+
+        <p>
+            Fue muy utilizada porque simplificaba tareas como modificar
+            elementos, responder a eventos, crear efectos y realizar
+            solicitudes a servidores.
+        </p>
+    </section>
+
+
+    <!-- ¿POR QUÉ FUE CREADO? -->
+    <section class="info-section">
+        <h2>¿Por qué fue creado?</h2>
+
+        <p>
+            jQuery fue creado para hacer más sencillo el trabajo con
+            JavaScript y evitar que los desarrolladores tuvieran que
+            escribir mucho código para realizar tareas comunes.
+        </p>
+
+        <div class="conceptos-grid">
+
+            <div class="concepto-card">
+                <h3>⚡ Menos código</h3>
+                <p>
+                    Permite realizar algunas acciones con instrucciones
+                    más cortas.
+                </p>
+            </div>
+
+            <div class="concepto-card">
+                <h3>🎨 Efectos</h3>
+                <p>
+                    Facilita la creación de efectos visuales en una página.
+                </p>
+            </div>
+
+            <div class="concepto-card">
+                <h3>🖱️ Eventos</h3>
+                <p>
+                    Permite trabajar fácilmente con acciones como clics.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SINTAXIS $ -->
+    <section class="comparacion-section">
+        <h2>La sintaxis $()</h2>
+
+        <p>
+            Una de las características más conocidas de jQuery es el uso
+            del símbolo <strong>$</strong>. Se utiliza para seleccionar
+            elementos HTML y trabajar con ellos.
+        </p>
+
+        <pre><code>$("#titulo")</code></pre>
+
+        <p>
+            En este ejemplo, <strong>#titulo</strong> selecciona el elemento
+            que tiene el identificador <strong>titulo</strong>.
+        </p>
+
+        <pre><code>$("#boton").click(function() {
+    alert("¡Hola!");
+});</code></pre>
+    </section>
+
+
+    <!-- JQUERY VS JAVASCRIPT -->
+    <section class="info-section">
+        <h2>jQuery vs JavaScript moderno</h2>
+
+        <div class="tabla-contenedor">
+            <table class="tabla-comparacion">
+
+                <tr>
+                    <th>Característica</th>
+                    <th>jQuery</th>
+                    <th>JavaScript moderno</th>
+                </tr>
+
+                <tr>
+                    <td>Sintaxis</td>
+                    <td>Puede ser más corta</td>
+                    <td>Utiliza funciones propias del lenguaje</td>
+                </tr>
+
+                <tr>
+                    <td>Uso</td>
+                    <td>Facilita tareas comunes</td>
+                    <td>Permite trabajar directamente con el navegador</td>
+                </tr>
+
+                <tr>
+                    <td>Velocidad</td>
+                    <td>Necesita cargar la biblioteca</td>
+                    <td>No necesita una biblioteca adicional</td>
+                </tr>
+
+                <tr>
+                    <td>Actualidad</td>
+                    <td>Se utiliza en algunos proyectos</td>
+                    <td>Es la opción principal para proyectos modernos</td>
+                </tr>
+
+            </table>
+        </div>
+    </section>
+
+
+    <!-- VENTAJAS Y DESVENTAJAS -->
+    <section class="info-section">
+        <h2>Ventajas y desventajas</h2>
+
+        <div class="conceptos-grid">
+
+            <div class="concepto-card ventaja">
+                <h3>✅ Ventajas</h3>
+                <p>
+                    Su sintaxis puede ser sencilla, facilita algunos
+                    efectos y permite trabajar fácilmente con elementos
+                    HTML y eventos.
+                </p>
+            </div>
+
+            <div class="concepto-card desventaja">
+                <h3>❌ Desventajas</h3>
+                <p>
+                    Es necesario cargar una biblioteca adicional y muchas
+                    funciones que antes requerían jQuery ahora pueden
+                    realizarse directamente con JavaScript.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FADE IN -->
+    <section class="eventos-section">
+        <h2>Ejemplo: fadeIn()</h2>
+
+        <p>
+            El efecto <strong>fadeIn()</strong> permite mostrar
+            progresivamente un elemento.
+        </p>
+
+        <button onclick="mostrarCaja()">Mostrar ejemplo</button>
+
+        <div id="cajaFade">
+            ¡Hola! Esta caja apareció con un efecto.
+        </div>
+    </section>
+
+
+    <!-- SLIDE TOGGLE -->
+    <section class="eventos-section">
+        <h2>Ejemplo: slideToggle()</h2>
+
+        <p>
+            <strong>slideToggle()</strong> permite mostrar u ocultar
+            un elemento utilizando un efecto deslizante.
+        </p>
+
+        <button onclick="alternarCaja()">Mostrar / Ocultar</button>
+
+        <div id="cajaSlide">
+            Esta información puede aparecer o desaparecer.
+        </div>
+    </section>
+
+
+    <!-- CÓDIGO -->
+    <section class="ejemplo-section">
+        <h2>Ejemplo de código jQuery</h2>
+
+        <pre><code>$("#boton").click(function() {
+    $("#mensaje").slideToggle();
+});</code></pre>
+
+        <p>
+            En este ejemplo, cuando el usuario hace clic en el botón,
+            el elemento con el identificador <strong>mensaje</strong>
+            aparece o desaparece utilizando un efecto deslizante.
+        </p>
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>🥞 Pancake Box</p>
+        <p>Pequeños pancakes, grandes antojos.</p>
+    </footer>
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        function mostrarCaja() {
+            $("#cajaFade").fadeIn();
+        }
+
+        function alternarCaja() {
+            $("#cajaSlide").slideToggle();
+        }
+
+    </script>
+
+</body>
+</html>

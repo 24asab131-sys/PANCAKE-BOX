@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript | Pancake Box</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <img src="Imagenes/logo.jpeg" alt="Logo Pancake Box">
+                <span>Pancake Box</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Inicio</a></li>
+
+                <li><a href="index.html#producto">Producto</a></li>
+
+                <li><a href="javascript.html">JavaScript</a></li>
+
+                <li><a href="jquery.html">jQuery</a></li>
+
+                <li><a href="json.html">JSON</a></li>
+
+                <li><a href="hosting.html">Hosting & Dominios</a></li>
+
+                <li><a href="cuestionario.html">Cuestionario</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PORTADA -->
+
+    <main>
+
+        <section class="pagina-hero">
+
+            <div>
+
+                <p class="small-title">TECNOLOGÍA WEB</p>
+
+                <h1>Java<span>Script</span></h1>
+
+                <p>
+                    El lenguaje que permite agregar interactividad
+                    y comportamiento a las páginas web.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ¿QUÉ ES? -->
+
+        <section class="info-section">
+
+            <p class="small-title">CONCEPTOS BÁSICOS</p>
+
+            <h2>¿Qué es JavaScript?</h2>
+
+            <p>
+                JavaScript es un lenguaje de programación utilizado
+                principalmente para crear páginas web interactivas.
+                Permite que una página pueda responder a las acciones
+                que realiza el usuario.
+            </p>
+
+            <p>
+                Por ejemplo, JavaScript puede utilizarse para mostrar
+                mensajes, cambiar contenido, validar formularios,
+                realizar cálculos y crear efectos dentro de una página.
+            </p>
+
+        </section>
+
+
+        <!-- HTML CSS JS -->
+
+        <section class="comparacion-section">
+
+            <p class="small-title">LAS TRES TECNOLOGÍAS</p>
+
+            <h2>HTML, CSS y JavaScript</h2>
+
+            <div class="comparacion-container">
+
+                <div class="comparacion-card">
+
+                    <span>🏗️</span>
+
+                    <h3>HTML</h3>
+
+                    <p>
+                        Se encarga de crear la estructura
+                        y el contenido de una página web.
+                    </p>
+
+                </div>
+
+
+                <div class="comparacion-card">
+
+                    <span>🎨</span>
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        Se utiliza para darle diseño,
+                        colores, tamaños y estilos a la página.
+                    </p>
+
+                </div>
+
+
+                <div class="comparacion-card">
+
+                    <span>⚡</span>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Permite agregar interactividad
+                        y comportamiento a los elementos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VARIABLES Y FUNCIONES -->
+
+        <section class="info-section">
+
+            <p class="small-title">ELEMENTOS IMPORTANTES</p>
+
+            <h2>Variables y funciones</h2>
+
+            <div class="conceptos-grid">
+
+                <div class="concepto-box">
+
+                    <h3>📦 Variables</h3>
+
+                    <p>
+                        Una variable permite guardar información
+                        que puede utilizarse posteriormente dentro
+                        de un programa.
+                    </p>
+
+                    <pre><code>let nombre = "Pancake Box";</code></pre>
+
+                </div>
+
+
+                <div class="concepto-box">
+
+                    <h3>⚙️ Funciones</h3>
+
+                    <p>
+                        Una función es un bloque de código que realiza
+                        una tarea específica y puede ejecutarse cuando
+                        sea necesario.
+                    </p>
+
+                    <pre><code>function saludar() {
+    alert("¡Bienvenido!");
+}</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENTOS -->
+
+        <section class="eventos-section">
+
+            <p class="small-title">INTERACCIÓN</p>
+
+            <h2>Eventos en JavaScript</h2>
+
+            <p>
+                Los eventos permiten que JavaScript responda a las
+                acciones realizadas por el usuario.
+            </p>
+
+            <div class="eventos-container">
+
+                <div class="evento-card">
+
+                    <span>🖱️</span>
+
+                    <h3>Click</h3>
+
+                    <p>
+                        Se ejecuta cuando el usuario hace clic
+                        sobre un elemento.
+                    </p>
+
+                </div>
+
+
+                <div class="evento-card">
+
+                    <span>👆</span>
+
+                    <h3>Hover</h3>
+
+                    <p>
+                        Puede utilizarse para detectar cuando
+                        el usuario coloca el cursor sobre un elemento.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EJEMPLO PRÁCTICO -->
+
+        <section class="ejemplo-section">
+
+            <p class="small-title">EJEMPLO PRÁCTICO</p>
+
+            <h2>JavaScript en acción</h2>
+
+            <p>
+                El siguiente botón utiliza JavaScript para cambiar
+                el mensaje que aparece en pantalla.
+            </p>
+
+            <div class="ejemplo-box">
+
+                <button id="botonMensaje">
+                    🥞 Haz clic aquí
+                </button>
+
+                <p id="mensaje">
+                    Aquí aparecerá un mensaje.
+                </p>
+
+            </div>
+
+
+            <div class="codigo-explicacion">
+
+                <h3>¿Cómo funciona?</h3>
+
+                <p>
+                    Primero se selecciona el botón mediante su identificador.
+                    Después se agrega un evento <strong>click</strong>.
+                    Cuando el usuario presiona el botón, JavaScript cambia
+                    el texto del mensaje.
+                </p>
+
+                <pre><code>const boton = document.getElementById("botonMensaje");
+
+boton.addEventListener("click", function() {
+
+    document.getElementById("mensaje").textContent =
+        "¡Gracias por visitar Pancake Box! 🥞";
+
+});</code></pre>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <h3>🥞 Pancake Box</h3>
+
+        <p>Pequeños pancakes, grandes antojos.</p>
+
+        <p>© 2026 Pancake Box | Proyecto de Desarrollo Web</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT DEL EJEMPLO -->
+
+    <script>
+
+        const boton = document.getElementById("botonMensaje");
+
+        boton.addEventListener("click", function() {
+
+            document.getElementById("mensaje").textContent =
+                "¡Gracias por visitar Pancake Box! 🥞";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

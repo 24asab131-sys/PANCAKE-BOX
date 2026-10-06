@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON | Pancake Box</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <img src="Imagenes/logo.jpeg" alt="Logo Pancake Box">
+                <span>Pancake Box</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                <li><a href="jquery.html">jQuery</a></li>
+                <li><a href="json.html" class="activo">JSON</a></li>
+                <li><a href="hosting.html">Hosting & Dominios</a></li>
+                <li><a href="cuestionario.html">Cuestionario</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ENCABEZADO -->
+    <section class="pagina-hero">
+        <div>
+            <span class="etiqueta">TECNOLOGÍA WEB</span>
+
+            <h1>JSON</h1>
+
+            <p>
+                Una forma sencilla y organizada de almacenar
+                e intercambiar información.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ¿QUÉ ES JSON? -->
+    <section class="info-section">
+
+        <h2>¿Qué es JSON?</h2>
+
+        <p>
+            JSON significa <strong>JavaScript Object Notation</strong>.
+            Es un formato de texto utilizado para almacenar y transmitir
+            información de una manera sencilla y organizada.
+        </p>
+
+        <p>
+            JSON es muy utilizado en páginas web y aplicaciones para
+            enviar información entre un servidor y un navegador.
+        </p>
+
+    </section>
+
+
+    <!-- ¿POR QUÉ ES UN ESTÁNDAR? -->
+    <section class="info-section">
+
+        <h2>¿Por qué se utiliza como estándar?</h2>
+
+        <p>
+            JSON se utiliza ampliamente porque es fácil de leer y escribir
+            tanto para las personas como para los programas.
+        </p>
+
+        <p>
+            Además, puede utilizarse con diferentes lenguajes de programación,
+            por lo que facilita el intercambio de información entre sistemas.
+        </p>
+
+    </section>
+
+
+    <!-- CLAVE Y VALOR -->
+    <section class="comparacion-section">
+
+        <h2>Clave y valor</h2>
+
+        <p>
+            Los datos en JSON se organizan principalmente mediante
+            pares de <strong>clave y valor</strong>.
+        </p>
+
+        <pre><code>{
+    "producto": "Berry Box",
+    "precio": 3.50,
+    "disponible": true
+}</code></pre>
+
+        <p>
+            En este ejemplo, <strong>producto</strong>,
+            <strong>precio</strong> y <strong>disponible</strong>
+            son las claves. Sus respectivos datos son los valores.
+        </p>
+
+    </section>
+
+
+    <!-- OBJETOS Y ARRAYS -->
+    <section class="info-section">
+
+        <h2>Objetos y arrays</h2>
+
+        <div class="conceptos-grid">
+
+            <div class="concepto-card">
+
+                <h3>📦 Objeto</h3>
+
+                <p>
+                    Un objeto contiene información organizada mediante
+                    claves y valores.
+                </p>
+
+                <pre><code>{
+    "nombre": "Choco Box",
+    "precio": 4.00
+}</code></pre>
+
+            </div>
+
+
+            <div class="concepto-card">
+
+                <h3>📋 Array</h3>
+
+                <p>
+                    Un array permite guardar varios elementos dentro
+                    de una lista.
+                </p>
+
+                <pre><code>[
+    "Berry Box",
+    "Choco Box",
+    "Banana Sweet"
+]</code></pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JAVASCRIPT VS JSON -->
+    <section class="info-section">
+
+        <h2>JavaScript vs JSON</h2>
+
+        <p>
+            Aunque JSON está basado en la sintaxis de los objetos de
+            JavaScript, no son exactamente lo mismo.
+        </p>
+
+        <div class="tabla-contenedor">
+
+            <table class="tabla-comparacion">
+
+                <tr>
+                    <th>JavaScript</th>
+                    <th>JSON</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        Es un lenguaje de programación.
+                    </td>
+
+                    <td>
+                        Es un formato para representar datos.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Puede contener funciones.
+                    </td>
+
+                    <td>
+                        No contiene funciones.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Puede ejecutar instrucciones.
+                    </td>
+
+                    <td>
+                        Se utiliza principalmente para almacenar
+                        e intercambiar información.
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- EJEMPLO VISUAL -->
+    <section class="comparacion-section">
+
+        <h2>Ejemplo visual</h2>
+
+        <p>
+            Observa la diferencia entre un objeto de JavaScript
+            y un texto escrito en formato JSON.
+        </p>
+
+        <div class="conceptos-grid">
+
+            <div class="concepto-card">
+
+                <h3>JavaScript</h3>
+
+                <pre><code>const producto = {
+    nombre: "Berry Box",
+    precio: 3.50
+};</code></pre>
+
+            </div>
+
+
+            <div class="concepto-card">
+
+                <h3>JSON</h3>
+
+                <pre><code>{
+    "nombre": "Berry Box",
+    "precio": 3.50
+}</code></pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JSON EN LAS APLICACIONES WEB -->
+    <section class="info-section">
+
+        <h2>¿Cómo utilizan JSON las aplicaciones web?</h2>
+
+        <p>
+            Las aplicaciones web pueden utilizar JSON para enviar y
+            recibir información entre el navegador y un servidor.
+        </p>
+
+        <p>
+            Por ejemplo, una página de una tienda puede solicitar al
+            servidor información sobre sus productos. El servidor puede
+            responder enviando esos datos en formato JSON.
+        </p>
+
+        <div class="flujo-json">
+
+            <div class="flujo-card">
+                <span>💻</span>
+                <h3>Navegador</h3>
+                <p>Solicita información.</p>
+            </div>
+
+            <div class="flecha">➡️</div>
+
+            <div class="flujo-card">
+                <span>🖥️</span>
+                <h3>Servidor</h3>
+                <p>Procesa la solicitud.</p>
+            </div>
+
+            <div class="flecha">➡️</div>
+
+            <div class="flujo-card">
+                <span>📄</span>
+                <h3>JSON</h3>
+                <p>Transporta los datos.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EJEMPLO PANCAKE BOX -->
+    <section class="ejemplo-section">
+
+        <h2>JSON en Pancake Box 🥞</h2>
+
+        <p>
+            En una página como Pancake Box, JSON podría utilizarse para
+            guardar información de nuestros productos.
+        </p>
+
+        <pre><code>{
+    "nombre": "Banana Sweet",
+    "precio": 3.75,
+    "ingrediente": "Banana",
+    "disponible": true
+}</code></pre>
+
+        <p>
+            De esta manera, una aplicación podría recibir fácilmente
+            información sobre el producto y mostrarla en la página.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>🥞 Pancake Box</p>
+        <p>Pequeños pancakes, grandes antojos.</p>
+
+    </footer>
+
+</body>
+</html>ya
