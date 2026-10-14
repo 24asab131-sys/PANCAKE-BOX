@@ -1,0 +1,461 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Herramientas de Google | Pancake Box</title>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #fff8f1;
+            color: #493225;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #70452c;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            color: #ffd5df;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 20px !important;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .carrusel img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .google-intro {
+            text-align: center;
+            padding: 35px 20px 20px;
+        }
+
+        .google-intro h1 {
+            color: #70452c;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .google-intro p {
+            max-width: 750px;
+            margin: 15px auto;
+            line-height: 1.7;
+        }
+
+        .herramientas {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            padding: 20px 6% 50px;
+        }
+
+        .herramienta {
+            background-color: #fffdf9;
+            padding: 22px;
+            border: 1px solid #ead8c7;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 8px #70452c12;
+            transition: transform 0.2s;
+        }
+
+        .herramienta:hover {
+            transform: translateY(-4px);
+        }
+
+        .herramienta .numero {
+            color: #a16d4d;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .herramienta h2 {
+            color: #70452c;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .herramienta p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .herramienta a {
+            display: inline-block;
+            background-color: #e9a6b8;
+            color: #492b2b;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .herramienta a:hover {
+            background-color: #f2c4d0;
+        }
+
+        .nota {
+            background-color: #f4e5d5;
+            border-radius: 12px;
+            margin: 0 6% 40px;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        footer {
+            background-color: #70452c;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        .modo-btn {
+            border: 1px solid #fff;
+            border-radius: 20px;
+            padding: 7px 12px;
+            background-color: #e9a6b8;
+            color: #492b2b;
+            cursor: pointer;
+        }
+
+        body.oscuro {
+            background-color: #29231f;
+            color: #f8eee5;
+        }
+
+        body.oscuro .google-intro h1,
+        body.oscuro .herramienta h2 {
+            color: #f1c6a8;
+        }
+
+        body.oscuro .herramienta {
+            background-color: #3b312b;
+            border-color: #655044;
+        }
+
+        body.oscuro .nota {
+            background-color: #40352d;
+        }
+
+        body.oscuro .google-intro p {
+            color: #f8eee5;
+        }
+
+        @media (max-width: 850px) {
+            .herramientas {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 550px) {
+            .herramientas {
+                grid-template-columns: 1fr;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .google-intro h1 {
+                font-size: 29px;
+            }
+
+            .carrusel img {
+                height: 200px;
+            }
+
+            .navbar {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/logo.jpeg" alt="Logo Pancake Box">
+                <span>Pancake Box</span>
+            </a>
+
+            <a href="index.html">Inicio</a>
+            <a href="javascript.html">JavaScript</a>
+            <a href="jquery.html">jQuery</a>
+            <a href="json.html">JSON</a>
+            <a href="hosting.html">Hosting &amp; Dominios</a>
+            <a href="google.html">Google</a>
+            <a href="cuestionario.html">Cuestionario</a>
+
+            <button class="modo-btn" id="cambiarModo" type="button">
+                🌙 Modo oscuro
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- CARRUSEL DE PANCAKES -->
+        <div id="carruselGoogle"
+             class="carousel slide carousel-fade carrusel"
+             data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="Imagenes/pancakes.jpeg"
+                         class="d-block w-100"
+                         alt="Pancakes de Pancake Box">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Imagenes/berry.jpeg"
+                         class="d-block w-100"
+                         alt="Pancakes con frutas">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Imagenes/choco.jpeg"
+                         class="d-block w-100"
+                         alt="Pancakes con chocolate">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Imagenes/banana.jpeg"
+                         class="d-block w-100"
+                         alt="Pancakes con banana">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carruselGoogle" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#carruselGoogle" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <!-- INTRODUCCIÓN -->
+        <section class="google-intro">
+            <h1>Herramientas de Google</h1>
+
+            <p>
+                Google ofrece diferentes herramientas que ayudan a estudiar,
+                organizar tareas, comunicarse y crear contenido. En esta sección
+                conocerás 15 herramientas y algunos de sus usos principales.
+            </p>
+        </section>
+
+        <!-- LAS 15 HERRAMIENTAS -->
+        <section class="herramientas">
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 01</span>
+                <h2>Google Classroom</h2>
+                <p>Ayuda a organizar clases, compartir materiales, entregar tareas y consultar calificaciones.</p>
+                <a href="https://classroom.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 02</span>
+                <h2>Google Drive</h2>
+                <p>Permite guardar archivos en línea, crear carpetas y compartir documentos.</p>
+                <a href="https://drive.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 03</span>
+                <h2>Google Docs</h2>
+                <p>Sirve para escribir trabajos, editar textos y colaborar con otras personas.</p>
+                <a href="https://docs.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 04</span>
+                <h2>Google Sheets</h2>
+                <p>Permite organizar datos en tablas, realizar operaciones y crear gráficos.</p>
+                <a href="https://sheets.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 05</span>
+                <h2>Google Slides</h2>
+                <p>Ayuda a preparar presentaciones con textos, imágenes y otros elementos visuales.</p>
+                <a href="https://slides.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 06</span>
+                <h2>Google Forms</h2>
+                <p>Sirve para crear formularios, encuestas y cuestionarios que recopilan respuestas.</p>
+                <a href="https://forms.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 07</span>
+                <h2>Google Meet</h2>
+                <p>Permite hacer videollamadas, reuniones y clases virtuales.</p>
+                <a href="https://meet.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 08</span>
+                <h2>Google Calendar</h2>
+                <p>Ayuda a organizar horarios, eventos, actividades y fechas importantes.</p>
+                <a href="https://calendar.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 09</span>
+                <h2>Google Sites</h2>
+                <p>Permite crear sitios web sencillos para presentar información y proyectos.</p>
+                <a href="https://sites.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 10</span>
+                <h2>Google Keep</h2>
+                <p>Sirve para guardar notas, listas y recordatorios de manera rápida.</p>
+                <a href="https://keep.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 11</span>
+                <h2>Google Chat</h2>
+                <p>Permite enviar mensajes y comunicarse con compañeros de estudio o trabajo.</p>
+                <a href="https://chat.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 12</span>
+                <h2>Gmail</h2>
+                <p>Es un servicio de correo electrónico para enviar y recibir mensajes y archivos.</p>
+                <a href="https://mail.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 13</span>
+                <h2>Google Gemini</h2>
+                <p>Es un asistente de inteligencia artificial que puede ayudar a explicar temas y generar ideas.</p>
+                <a href="https://gemini.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 14</span>
+                <h2>Google Vids</h2>
+                <p>Es una herramienta para crear videos y presentar ideas de forma visual. Su disponibilidad puede variar según la cuenta.</p>
+                <a href="https://vids.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+            <article class="herramienta">
+                <span class="numero">HERRAMIENTA 15</span>
+                <h2>Google Maps</h2>
+                <p>Ayuda a buscar lugares, consultar direcciones y planificar rutas.</p>
+                <a href="https://maps.google.com/" target="_blank" rel="noopener">Conocer herramienta</a>
+            </article>
+
+        </section>
+
+        <!-- INFORMACIÓN ADICIONAL -->
+        <section class="nota">
+            <h2>¿Cómo se utilizan estas herramientas?</h2>
+            <p>
+                Para comenzar, se puede abrir el enlace de la herramienta y acceder
+                con una cuenta de Google cuando sea necesario. Después, se siguen
+                las opciones que aparecen en pantalla para crear documentos,
+                compartir archivos, organizar actividades o comunicarse.
+            </p>
+            <p>
+                <strong>Importante:</strong> las funciones disponibles dependen del
+                servicio, del tipo de cuenta y de las condiciones de la institución.
+                Algunas funciones avanzadas de Google Workspace for Education
+                requieren planes de pago; eso no significa que todas estas
+                herramientas sean de pago.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <h3>Pancake Box</h3>
+        <p>Pequeños pancakes, grandes antojos.</p>
+        <p>Proyecto de Desarrollo Web | 2026</p>
+    </footer>
+
+    <!-- JAVASCRIPT DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- BOTÓN DE MODO CLARO Y OSCURO -->
+    <script>
+        const botonModo = document.getElementById("cambiarModo");
+
+        botonModo.addEventListener("click", function () {
+            document.body.classList.toggle("oscuro");
+
+            if (document.body.classList.contains("oscuro")) {
+                botonModo.textContent = "☀️ Modo claro";
+            } else {
+                botonModo.textContent = "🌙 Modo oscuro";
+            }
+        });
+    </script>
+
+    <script src="JS/script.js" defer></script>
+</body>
+</html>
+```

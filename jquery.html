@@ -74,7 +74,7 @@
         <div class="conceptos-grid">
 
             <div class="concepto-card">
-                <h3>⚡ Menos código</h3>
+                <h3> Menos código</h3>
                 <p>
                     Permite realizar algunas acciones con instrucciones
                     más cortas.
@@ -82,14 +82,14 @@
             </div>
 
             <div class="concepto-card">
-                <h3>🎨 Efectos</h3>
+                <h3> Efectos</h3>
                 <p>
                     Facilita la creación de efectos visuales en una página.
                 </p>
             </div>
 
             <div class="concepto-card">
-                <h3>🖱️ Eventos</h3>
+                <h3> Eventos</h3>
                 <p>
                     Permite trabajar fácilmente con acciones como clics.
                 </p>
@@ -171,7 +171,7 @@
         <div class="conceptos-grid">
 
             <div class="concepto-card ventaja">
-                <h3>✅ Ventajas</h3>
+                <h3> Ventajas</h3>
                 <p>
                     Su sintaxis puede ser sencilla, facilita algunos
                     efectos y permite trabajar fácilmente con elementos
@@ -180,7 +180,7 @@
             </div>
 
             <div class="concepto-card desventaja">
-                <h3>❌ Desventajas</h3>
+                <h3> Desventajas</h3>
                 <p>
                     Es necesario cargar una biblioteca adicional y muchas
                     funciones que antes requerían jQuery ahora pueden
@@ -264,5 +264,19 @@
 
     </script>
 
+    <script src="JS/script.js" defer></script>
 </body>
+<script>
+    const botonModo = document.getElementById("cambiarModo");
+
+    botonModo.addEventListener("click", function () {
+        document.body.classList.toggle("oscuro");
+
+        if (document.body.classList.contains("oscuro")) {
+            botonModo.textContent = "☀️ Modo claro";
+        } else {
+            botonModo.textContent = "🌙 Modo oscuro";
+        }
+    });
+</script>
 </html>

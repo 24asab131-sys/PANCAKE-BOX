@@ -39,7 +39,9 @@
                 <li><a href="cuestionario.html">Cuestionario</a></li>
 
             </ul>
-
+<button class="modo-btn" id="cambiarModo" type="button">
+    🌙 Modo oscuro
+</button>
         </nav>
 
     </header>
@@ -88,63 +90,46 @@
                 realizar cálculos y crear efectos dentro de una página.
             </p>
 
-        </section>
+        
+<div class="comparacion-container">
 
+    <div class="comparacion-card">
+        <div class="comparacion-franja franja-html"></div>
+        <div class="comparacion-contenido">
+            <span class="comparacion-numero"></span>
+            <h3>HTML</h3>
+            <p>
+                Se encarga de crear la estructura
+                y el contenido de una página web.
+            </p>
+        </div>
+    </div>
 
-        <!-- HTML CSS JS -->
+    <div class="comparacion-card">
+        <div class="comparacion-franja franja-css"></div>
+        <div class="comparacion-contenido">
+            <span class="comparacion-numero"></span>
+            <h3>CSS</h3>
+            <p>
+                Se utiliza para darle diseño,
+                colores, tamaños y estilos a la página.
+            </p>
+        </div>
+    </div>
 
-        <section class="comparacion-section">
+    <div class="comparacion-card">
+        <div class="comparacion-franja franja-js"></div>
+        <div class="comparacion-contenido">
+            <span class="comparacion-numero">
+            <h3>JavaScript</h3>
+            <p>
+                Permite agregar interactividad
+                y comportamiento a los elementos.
+            </p>
+        </div>
+    </div>
 
-            <p class="small-title">LAS TRES TECNOLOGÍAS</p>
-
-            <h2>HTML, CSS y JavaScript</h2>
-
-            <div class="comparacion-container">
-
-                <div class="comparacion-card">
-
-                    <span>🏗️</span>
-
-                    <h3>HTML</h3>
-
-                    <p>
-                        Se encarga de crear la estructura
-                        y el contenido de una página web.
-                    </p>
-
-                </div>
-
-
-                <div class="comparacion-card">
-
-                    <span>🎨</span>
-
-                    <h3>CSS</h3>
-
-                    <p>
-                        Se utiliza para darle diseño,
-                        colores, tamaños y estilos a la página.
-                    </p>
-
-                </div>
-
-
-                <div class="comparacion-card">
-
-                    <span>⚡</span>
-
-                    <h3>JavaScript</h3>
-
-                    <p>
-                        Permite agregar interactividad
-                        y comportamiento a los elementos.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
+</div>
 
 
         <!-- VARIABLES Y FUNCIONES -->
@@ -159,7 +144,7 @@
 
                 <div class="concepto-box">
 
-                    <h3>📦 Variables</h3>
+                    <h3>Variables</h3>
 
                     <p>
                         Una variable permite guardar información
@@ -174,7 +159,7 @@
 
                 <div class="concepto-box">
 
-                    <h3>⚙️ Funciones</h3>
+                    <h3> Funciones</h3>
 
                     <p>
                         Una función es un bloque de código que realiza
@@ -210,7 +195,7 @@
 
                 <div class="evento-card">
 
-                    <span>🖱️</span>
+                    <span></span>
 
                     <h3>Click</h3>
 
@@ -224,7 +209,7 @@
 
                 <div class="evento-card">
 
-                    <span>👆</span>
+                    <span></span>
 
                     <h3>Hover</h3>
 
@@ -307,21 +292,32 @@ boton.addEventListener("click", function() {
     </footer>
 
 
-    <!-- JAVASCRIPT DEL EJEMPLO -->
+    
+    <!-- JAVASCRIPT DEL EJEMPLO Y MODO OSCURO -->
 
     <script>
-
+        // Botón del ejemplo de JavaScript
         const boton = document.getElementById("botonMensaje");
 
         boton.addEventListener("click", function() {
-
             document.getElementById("mensaje").textContent =
                 "¡Gracias por visitar Pancake Box! 🥞";
-
         });
 
+        // Botón para cambiar entre modo claro y oscuro
+        const botonModo = document.getElementById("cambiarModo");
+
+        botonModo.addEventListener("click", function() {
+            document.body.classList.toggle("oscuro");
+
+            if (document.body.classList.contains("oscuro")) {
+                botonModo.textContent = "☀️ Modo claro";
+            } else {
+                botonModo.textContent = "🌙 Modo oscuro";
+            }
+        });
     </script>
 
+    <script src="JS/script.js" defer></script>
 </body>
-
 </html>

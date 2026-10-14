@@ -1,0 +1,66 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Pancake Box</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/logo.jpeg" alt="Logo Pancake Box">
+                <span>Pancake Box</span>
+            </a>
+
+            <a href="index.html">Inicio</a>
+            <a href="javascript.html">JavaScript</a>
+            <a href="jquery.html">jQuery</a>
+            <a href="json.html">JSON</a>
+            <a href="hosting.html">Hosting & Dominios</a>
+            <a href="cuestionario.html">Cuestionario</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contacto">
+        <h1>¡Hablemos! 💗</h1>
+        <p>¿Tienes alguna pregunta sobre nuestros mini pancakes?</p>
+        <p>Escríbenos y estaremos encantados de leerte.</p>
+
+        <form class="formulario-contacto"
+              action="https://formsubmit.co/19841423@clases.edu.sv"
+              method="POST">
+
+            <input type="hidden" name="_subject"
+                   value="Nuevo mensaje de Pancake Box">
+
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre"
+                   placeholder="Escribe tu nombre" required>
+
+            <label for="correo">Tu correo electrónico</label>
+            <input type="email" id="correo" name="correo"
+                   placeholder="ejemplo@correo.com" required>
+
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto"
+                   placeholder="¿Sobre qué nos escribes?" required>
+
+            <label for="mensaje">Tu mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5"
+                      placeholder="Escribe tu mensaje aquí..."
+                      required></textarea>
+
+            <button type="submit">Enviar mensaje 💌</button>
+
+        </form>
+    </main>
+
+    <script src="JS/script.js" defer></script>
+</body>
+</html>
+```

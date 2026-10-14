@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head>a
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Pancake Box | Pequeños pancakes, grandes antojos</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -15,6 +16,9 @@
     <!-- MENÚ DE NAVEGACIÓN -->
     <header>
         <nav class="navbar">
+            <button class="modo-btn" onclick="cambiarModo()">
+     Modo oscuro
+</button>
 
             <a href="index.html" class="logo">
                 <img src="Imagenes/logo.jpeg" alt="Logo Pancake Box">
@@ -27,6 +31,9 @@
             <a href="json.html">JSON</a>
             <a href="hosting.html">Hosting & Dominios</a>
             <a href="./cuestionario.html">Cuestionario</a>
+            <a href="google.html">Google</a>a
+            <a href="contacto.html">Contacto</a>
+ 
 
         </nav>
     </header>
@@ -63,10 +70,14 @@
             </div>
 
 
-            <div class="hero-image">
+           
+<div class="hero-image carrusel">
+    <button class="flecha anterior" onclick="cambiarImagen(-1)" aria-label="Imagen anterior">❮</button>
 
-                <img src="Imagenes/pancakes.jpeg"
-                    alt="Mini pancakes de Pancake Box">
+    <img id="imagenCarrusel" src="Imagenes/pancakes.jpeg" alt="Mini pancakes de Pancake Box">
+
+    <button class="flecha siguiente" onclick="cambiarImagen(1)" aria-label="Imagen siguiente">❯</button>
+</div>
 
             </div>
 
@@ -220,9 +231,10 @@
 
             </div>
 
-            <div class="sobre-decoracion">
-                🥞
-            </div>
+
+<div class="sobre-decoracion">
+    <img src="Imagenes/logo.jpeg" alt="Logo de Pancake Box">
+</div>
 
         </section>
 
@@ -236,61 +248,54 @@
 
             <h2>¿Por qué elegir Pancake Box?</h2>
 
-            <div class="porque-container">
+           
+<div class="porque-container">
+
+    <div class="porque-card">
+        <img src="Imagenes/pancakes.jpeg" alt="Mini pancakes deliciosos">
+
+        <h3>Deliciosos</h3>
+
+        <p>
+            Mini pancakes preparados para disfrutar
+            de un sabor dulce y especial.
+        </p>
+    </div>
+
+    <div class="porque-card">
+        <img src="Imagenes/berry.jpeg" alt="Pancakes con frutas">
+
+        <h3>Variedad</h3>
+
+        <p>
+            Diferentes frutas, chocolates y toppings
+            para crear combinaciones.
+        </p>
+    </div>
+
+    <div class="porque-card">
+        <img src="Imagenes/choco.jpeg" alt="Pancakes con chocolate">
+
+        <h3>Especiales</h3>
+
+        <p>
+            Una presentación atractiva que convierte
+            cada cajita en un momento especial.
+        </p>
+    </div>
+
+</div>
 
 
-                <div class="porque-card">
 
-                    <span>🥞</span>
-
-                    <h3>Deliciosos</h3>
-
-                    <p>
-                        Mini pancakes preparados para disfrutar
-                        de un sabor dulce y especial.
-                    </p>
-
-                </div>
-
-
-                <div class="porque-card">
-
-                    <span>🍓</span>
-
-                    <h3>Variedad</h3>
-
-                    <p>
-                        Diferentes frutas, chocolates y toppings
-                        para crear combinaciones.
-                    </p>
-
-                </div>
-
-
-                <div class="porque-card">
-
-                    <span>✨</span>
-
-                    <h3>Especiales</h3>
-
-                    <p>
-                        Una presentación atractiva que convierte
-                        cada cajita en un momento especial.
-                    </p>
-
-                </div>
-
-            </div>
-
+        
+        <!-- CERRAMOS LA SECCIÓN ¿POR QUÉ ELEGIRNOS? -->
         </section>
-
 
         <!-- TECNOLOGÍAS -->
         <section class="tecnologias-section">
 
-            <p class="small-title">
-                CONOCE EL PROYECTO
-            </p>
+            <p class="small-title">CONOCE EL PROYECTO</p>
 
             <h2>Tecnologías de nuestra web</h2>
 
@@ -301,56 +306,28 @@
 
             <div class="tecnologias-container">
 
-
                 <a href="javascript.html" class="tecnologia-card">
-
-                    <span>💻</span>
-
+                    <div class="numero-tecnologia numero-cafe">01</div>
                     <h3>JavaScript</h3>
-
-                    <p>
-                        Interactividad y comportamiento.
-                    </p>
-
+                    <p>Interactividad y comportamiento.</p>
                 </a>
-
 
                 <a href="jquery.html" class="tecnologia-card">
-
-                    <span>⚡</span>
-
+                    <div class="numero-tecnologia numero-rosa">02</div>
                     <h3>jQuery</h3>
-
-                    <p>
-                        Efectos y funciones simplificadas.
-                    </p>
-
+                    <p>Efectos y funciones simplificadas.</p>
                 </a>
-
 
                 <a href="json.html" class="tecnologia-card">
-
-                    <span>🧩</span>
-
+                    <div class="numero-tecnologia numero-verde">03</div>
                     <h3>JSON</h3>
-
-                    <p>
-                        Intercambio de información.
-                    </p>
-
+                    <p>Intercambio de información.</p>
                 </a>
 
-
                 <a href="hosting.html" class="tecnologia-card">
-
-                    <span>☁️</span>
-
-                    <h3>Hosting & Dominios</h3>
-
-                    <p>
-                        Publicación de sitios en internet.
-                    </p>
-
+                    <div class="numero-tecnologia numero-beige">04</div>
+                    <h3>Hosting y Dominios</h3>
+                    <p>Publicación de sitios en internet.</p>
                 </a>
 
             </div>

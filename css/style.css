@@ -67,6 +67,41 @@ header {
     color: #e8a0a8;
 }
 
+.traductor-btn {
+    flex-shrink: 0;
+    padding: 9px 13px;
+    border: 1px solid #fff9f0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #fff9f0;
+    font: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.traductor-btn:hover {
+    background-color: #fff9f0;
+    color: #4a2c20;
+}
+
+#google_translate_element {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+body > .skiptranslate,
+body > .goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
 
 /* =========================
    PORTADA
@@ -1509,4 +1544,332 @@ code {
         font-size: 15px;
     }
 
+}/* ================================
+   MODO OSCURO
+================================ */
+
+.modo-btn {
+    background-color: #e8a0a8;
+    color: #4a2c20;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.modo-btn:hover {
+    background-color: #fff9f0;
+}
+
+
+/* CAMBIOS DEL MODO OSCURO */
+
+body.modo-oscuro {
+    background-color: #211915;
+    color: #fff9f0;
+}
+
+body.modo-oscuro .productos-section,
+body.modo-oscuro .porque-section,
+body.modo-oscuro .eventos-section,
+body.modo-oscuro .info-section {
+    background-color: #211915;
+}
+
+body.modo-oscuro .producto-card,
+body.modo-oscuro .porque-card,
+body.modo-oscuro .tecnologia-card,
+body.modo-oscuro .concepto-card {
+    background-color: #352720;
+    color: #fff9f0;
+}
+
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro p {
+    color: #fff9f0;
+}
+
+body.modo-oscuro .sobre-nosotros,
+body.modo-oscuro .tecnologias-section,
+body.modo-oscuro .comparacion-section {
+    background-color: #2b201b;
+}
+
+body.modo-oscuro .section-description,
+body.modo-oscuro .producto-info p,
+body.modo-oscuro .porque-card p,
+body.modo-oscuro .tecnologia-card p {
+    color: #ead8c4;
+}
+/* Botón para cambiar el modo */
+.modo-btn {
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 7px 12px;
+    background-color: #e9a6b8;
+    color: #492b2b;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Colores del modo oscuro */
+body.oscuro {
+    background-color: #29231f;
+    color: #f8eee5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.oscuro header {
+    background-color: #211b17;
+}
+
+body.oscuro main {
+    background-color: #29231f;
+    color: #f8eee5;
+}
+
+body.oscuro section {
+    color: #f8eee5;
+}
+
+body.oscuro .card,
+body.oscuro article {
+    background-color: #3b312b;
+    color: #f8eee5;
+}
+
+body.oscuro h1,
+body.oscuro h2,
+body.oscuro h3,
+body.oscuro p {
+    color: #f8eee5;
+}
+
+body.oscuro footer {
+    background-color: #211b17;
+    color: #f8eee5;
+}
+/* Botón del modo claro y oscuro */
+.modo-btn {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 7px 12px;
+    background-color: #e9a6b8;
+    color: #492b2b;
+    cursor: pointer;
+}
+
+/* Modo oscuro */
+body.oscuro {
+    background-color: #29231f;
+    color: #f8eee5;
+}
+
+body.oscuro header,
+body.oscuro footer {
+    background-color: #211b17;
+    color: #f8eee5;
+}
+
+body.oscuro main,
+body.oscuro section {
+    background-color: #29231f;
+    color: #f8eee5;
+}
+
+body.oscuro h1,
+body.oscuro h2,
+body.oscuro h3,
+body.oscuro p {
+    color: #f8eee5;
+}
+
+body.oscuro .comparacion-card,
+body.oscuro .concepto-box,
+body.oscuro .evento-card,
+body.oscuro .ejemplo-box {
+    background-color: #3b312b;
+    color: #f8eee5; 
+}
+/* MEJORA DE LA PORTADA PANCAKE BOX */
+
+.hero {
+    min-height: 75vh;
+    padding: 55px 8%;
+    gap: 35px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 4.5vw, 56px);
+    line-height: 1.15;
+}
+
+.hero h2 {
+    font-size: clamp(23px, 2.5vw, 30px);
+    line-height: 1.4;
+}
+
+.hero-image {
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 340px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(74, 44, 32, 0.18);
+}
+
+/* PORTADA EN CELULARES */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 40px 6%;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+        height: 260px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+/* MEJORAR EL MENU DE NAVEGACION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff0df;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.navbar a:not(.logo) {
+    color: #fff0df;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.navbar a:not(.logo):hover {
+    color: #f3b6c8;
+}
+
+/* MENU EN PANTALLAS PEQUEÑAS */
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    .navbar a:not(.logo) {
+        margin: 4px;
+    }
+}
+/* CARRUSEL DE PANCAKE BOX */
+
+.carrusel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel img {
+    width: 100%;
+    max-width: 340px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(74, 44, 32, 0.18);
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    background: #6b4232;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.flecha:hover {
+    background: #d98ca3;
+}
+
+.flecha.anterior {
+    left: 5px;
+}
+
+.flecha.siguiente {
+    right: 5px;
+}
+
+@media (max-width: 768px) {
+    .carrusel img {
+        max-width: 280px;
+        height: 260px;
+    }
+}
+
+/* MARGEN ALREDEDOR DE LAS FOTOS */
+
+.carrusel {
+    margin: 25px;
+    padding: 15px;
+}
+
+.carrusel img {
+    box-sizing: border-box;
+}
+
