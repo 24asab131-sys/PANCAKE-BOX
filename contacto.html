@@ -1,11 +1,13 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Pancake Box</title>
+    <meta name="description" content="Contáctanos para resolver tus dudas sobre Pancake Box.">
     <link rel="stylesheet" href="css/style.css">
+    <script src="JS/script.js" defer></script>
+    <script src="JS/contacto.js" defer></script>
 </head>
 <body>
 
@@ -27,40 +29,56 @@
     </header>
 
     <main class="contacto">
-        <h1>¡Hablemos! 💗</h1>
-        <p>¿Tienes alguna pregunta sobre nuestros mini pancakes?</p>
-        <p>Escríbenos y estaremos encantados de leerte.</p>
+        <section class="contacto-panel" aria-labelledby="contacto-titulo">
+            <div class="contacto-intro">
+                <p class="small-title">ESTAMOS PARA AYUDARTE</p>
+                <h1 id="contacto-titulo">¡Contáctanos! 💗</h1>
+                <p>¿Tienes alguna pregunta sobre nuestros mini pancakes?</p>
+                <p>Cuéntanos cómo podemos ayudarte y te responderemos pronto.</p>
+                <div class="contacto-nota">
+                    <span aria-hidden="true">🥞</span>
+                    <p>Tu mensaje llegará directamente a nuestro equipo.</p>
+                </div>
+            </div>
 
-        <form class="formulario-contacto"
-              action="https://formsubmit.co/19841423@clases.edu.sv"
-              method="POST">
+            <form class="formulario-contacto" id="formularioContacto">
+                <label for="nombre">Tu nombre</label>
+                <input type="text" id="nombre" name="nombre"
+                       placeholder="Escribe tu nombre" autocomplete="name"
+                       maxlength="80" required>
 
-            <input type="hidden" name="_subject"
-                   value="Nuevo mensaje de Pancake Box">
+                <label for="correo">Tu correo electrónico</label>
+                <input type="email" id="correo" name="correo"
+                       placeholder="ejemplo@correo.com" autocomplete="email"
+                       maxlength="254" required>
 
-            <label for="nombre">Tu nombre</label>
-            <input type="text" id="nombre" name="nombre"
-                   placeholder="Escribe tu nombre" required>
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto"
+                       placeholder="¿Sobre qué nos escribes?"
+                       maxlength="120" required>
 
-            <label for="correo">Tu correo electrónico</label>
-            <input type="email" id="correo" name="correo"
-                   placeholder="ejemplo@correo.com" required>
+                <label for="mensaje">Tu mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="6"
+                          placeholder="Escribe tu mensaje aquí..."
+                          maxlength="2000" required></textarea>
 
-            <label for="asunto">Asunto</label>
-            <input type="text" id="asunto" name="asunto"
-                   placeholder="¿Sobre qué nos escribes?" required>
+                <div class="contacto-trampa" aria-hidden="true">
+                    <label for="sitioWeb">Deja este campo vacío</label>
+                    <input type="text" id="sitioWeb" name="website"
+                           tabindex="-1" autocomplete="off">
+                </div>
 
-            <label for="mensaje">Tu mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5"
-                      placeholder="Escribe tu mensaje aquí..."
-                      required></textarea>
-
-            <button type="submit">Enviar mensaje 💌</button>
-
-        </form>
+                <button type="submit" id="enviarContacto">Enviar mensaje 💌</button>
+                <p class="contacto-estado" id="estadoContacto"
+                   role="status" aria-live="polite"></p>
+            </form>
+        </section>
     </main>
 
-    <script src="JS/script.js" defer></script>
+    <footer>
+        <h3>🥞 Pancake Box</h3>
+        <p>Pequeños pancakes, grandes antojos.</p>
+        <p>© 2026 Pancake Box | Proyecto de Desarrollo Web</p>
+    </footer>
 </body>
 </html>
-```
