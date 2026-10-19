@@ -66,46 +66,4 @@ pancake-box/
 └── README.md               # Este archivo
 ```
 
-💻 Ejemplos de Código (Snippets)
-
-1. Modelo de Pedido (Backend - Mongoose)
-
-```javascript
-const mongoose = require('mongoose');
-
-const orderSchema = new mongoose.Schema({
-user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-boxDetails: {
-batterType: { type: String, required: true }, // Ej: Clásico, Avena, Vegano
-toppings: [{ type: String }], // Ej: Fresas, Chispas de chocolate
-syrup: { type: String }
-},
-totalPrice: { type: Number, required: true },
-status: { type: String, default: 'Preparando', enum: ['Preparando', 'En Camino', 'Entregado'] },
-createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Order', orderSchema);
-```
-
-2. Componente de Selección de Ingredientes (Frontend - React)
-
-```jsx
-import React, { useState } from 'react';
-
-const BoxBuilder = () => {
-const [batter, setBatter] = useState('Clásico');
-const [toppings, setToppings] = useState([]);
-
-const handleToppingToggle = (topping) => {
-if (toppings.includes(topping)) {
-setToppings(toppings.filter(t => t !== topping));
-} else {
-setToppings([...toppings, topping]);
-}
-};
-
-return (
-
-Arma tu Pancake Box
 
