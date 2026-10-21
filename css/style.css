@@ -85,24 +85,6 @@ header {
     color: #4a2c20;
 }
 
-#google_translate_element {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-}
-
-body > .skiptranslate,
-body > .goog-te-banner-frame {
-    display: none !important;
-}
-
-body {
-    top: 0 !important;
-}
-
-
 /* =========================
    PORTADA
 ========================= */
@@ -351,14 +333,26 @@ footer p {
     box-shadow: 0 18px 30px rgba(74, 44, 32, 0.18);
 }
 
+.
 .producto-imagen {
     height: 230px;
+    width: 100%;
     background-color: #e8a0a8;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 90px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
 }
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
 
 .producto-info {
     padding: 25px;
@@ -716,7 +710,7 @@ footer p {
 }
 
 .comparacion-card span {
-    font-size: 50px;
+    font-size: 18px;
 }
 
 .comparacion-card h3 {
@@ -2126,16 +2120,7 @@ body.oscuro .ejemplo-box {
         line-height: 1.2;
     }
 
-    .producto-imagen img,
-    .porque-card img {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        object-fit: cover;
-    }
-
-    .producto-imagen img {
-        height: 100%;
+}
     }
 
     .porque-card img {
@@ -2150,6 +2135,20 @@ body.oscuro .ejemplo-box {
         border-radius: 50%;
         object-fit: cover;
     }
+.producto-imagen img,
+.porque-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.producto-imagen img {
+    height: 220px;
+    object-position: center;
+    border-radius: 18px 18px 0 0;
+}
+
 
     .producto-abajo {
         flex-wrap: wrap;
